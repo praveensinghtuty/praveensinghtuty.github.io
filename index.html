@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Native</title>
+  </head>
+  <body>
+    <div class="mobile-navigation" id="mobileNavigation">
+      <div class="mobile-navigation-header">
+        <img src="img/logo.svg" alt="" class="logo" />
+        <div class="close-button">
+          <button onclick="toggleSideMenu();">
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+      </div>
+      <a href="" class="mobile-menu-item selected">Home</a>
+      <a href="" class="mobile-menu-item">Features</a>
+      <a href="" class="mobile-menu-item">Pricing</a>
+      <a href="" class="mobile-menu-item">About</a>
+      <a href="" class="mobile-menu-item">Blog</a>
+    </div>
+    <div class="container">
+      <header>
+        <img src="img/logo.svg" alt="" class="logo" />
+        <nav class="menu">
+          <a href="" class="menu-item selected">Home</a>
+          <a href="" class="menu-item">Features</a>
+          <a href="" class="menu-item">Pricing</a>
+          <a href="" class="menu-item">About</a>
+          <a href="" class="menu-item">Blog</a>
+        </nav>
+        <div class="menu-button">
+          <button onclick="toggleSideMenu();">
+            <i class="fa fa-reorder"></i>
+          </button>
+        </div>
+
+        <button class="signup-button">SIGN UP</button>
+      </header>
+      <main>
+        <div class="page-content">
+          <h1 class="headline">Get your things done, Stay under control.</h1>
+          <p class="description">
+            Focus is the easiest way to manage your daily to-dos. Organize your
+            projects, keep track of your progress and get things done.
+          </p>
+          <div class="email-content">
+            <input
+              type="email"
+              class="email-input"
+              placeholder="Enter your email"
+            />
+            <button class="email-submit">Get started</button>
+          </div>
+        </div>
+        <div class="page-image">
+          <img src="img/done-5.svg" alt="" class="main-image" />
+        </div>
+      </main>
+    </div>
+    <script>
+      function toggleSideMenu() {
+        let element = document.getElementById("mobileNavigation");
+        if (element.classList.contains("open")) {
+          element.classList.remove("open");
+        } else {
+          element.classList.add("open");
+        }
+      }
+      function selectMenu(event) {
+        var list = Array.from(document.getElementsByClassName("menu-item"));
+        list.forEach((elem) => {
+          elem.classList.remove("selected");
+        });
+        event.target.classList.add("selected");
+      }
+
+      var menuItems = Array.from(document.getElementsByClassName("menu-item"));
+      menuItems.forEach((menu) => {
+        menu.href = "javascript:void(0);";
+        menu.addEventListener("click", selectMenu);
+      });
+    </script>
+  </body>
+</html>

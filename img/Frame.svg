@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1430px" height="782px" viewBox="0 0 1430 782" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Frame</title>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#9AADF6" offset="0%"></stop>
+            <stop stop-color="#0C132C" offset="0%"></stop>
+            <stop stop-color="#1C234A" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1430" height="782"></rect>
+        <filter x="-2.1%" y="-2.0%" width="104.3%" height="108.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="5.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="15" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="13" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.284609921 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Frame" transform="translate(0.000000, 0.000000)">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <g id="Mask">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+            <path d="M895.877193,252.982456 C742.982456,534.210526 955.438596,477.719298 795.789474,636.140351 C636.140351,794.561404 402.807018,718.421053 273.859649,697.54386 C144.912281,676.666667 9.8245614,655.789474 -27.0175439,751.578947 C-63.8596491,847.368421 1409.82456,930.877193 1456.49123,794.561404 C1503.15789,658.245614 1594.03509,17.1929825 1456.49123,-13.5087719 C1318.94737,-44.2105263 1048.77193,-28.245614 895.877193,252.982456 Z" id="Path" fill-opacity="0.664308348" fill="#1C254C" mask="url(#mask-3)"></path>
+        </g>
+    </g>
+</svg>
